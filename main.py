@@ -9,7 +9,7 @@ app = FastAPI()
 @app.get('/')
 def main():
     return { 
-        "msg" : "Hola soy la API ejemeplo y estoy viva" 
+        "msg" : "EJEMPLO" 
         }
 
 @app.get("/curp/{curp}")

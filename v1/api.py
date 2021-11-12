@@ -43,13 +43,9 @@ class Validador:
         # URL endpoint => http://www.renapo.sep.gob.mx/wsrenapo/MainControllerParam
         # Using POST
         url = "http://www.renapo.sep.gob.mx/wsrenapo/MainControllerParam"
-
-        # Params for test
-        #params = { "curp" : "MOMA940101HMCRRN06" }
-        #params = { "curp" : "MORJ681220HMCRML01" }
         
-        # set the curp as param
-        #param = curp --> the parameter should be included before call the post funct
+        # set curp as param
+        #param = curp --> the parameter should be included before call the post function
         param = "curp=" + curp
 
         # convert Request to json
