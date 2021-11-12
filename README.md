@@ -25,4 +25,50 @@ Por default la API estará ejecutandose en [http://127.0.0.1:8000](http://127.0.
 ## Utilizar API
 Por el momento la _API_ únicamente incluye el _endpoint_ "curp", el cual permite comprobar si una __CURP__ existe en el sistema. Los resultados serán proporcionados por la pagina, por lo cuál el API no almacenará ninguna información.
 
+Para utilizar el servicio hay que ingresar a la ruta [http://127.0.0.1:8000/curp/](http://127.0.0.1:8000/curp/) en donde se tiene que enviar el parámetro de la CURP [referencia del formato CURP](https://es.wikipedia.org/wiki/Clave_%C3%9Anica_de_Registro_de_Poblaci%C3%B3n).
 
+## Respuesta de API
+La _API_ regresará como resultado un objeto JSON que incluye la información extraída de la pagina para su fácil consulta, a continuación un ejemplo de como se ve el resultado válido:
+
+```
+{
+  "AnioReg": "1994",
+  "Apellido1": "XXXX",
+  "Apellido2": "XXXX",
+  "CRIP": "",
+  "CURP": "XXXXXXXXXXXXXXXXXX",
+  "CveEntidadEmisora": "",
+  "CveEntidadNac": "MC",
+  "CveMunicipioReg": "081",
+  "DocProbatorio": "1",
+  "FechNac": "01/01/1900",
+  "Foja": "",
+  "FolioCarta": "",
+  "Libro": "",
+  "Nacionalidad": "MEX",
+  "Nombres": "ANTONIO",
+  "NumActa": "00055",
+  "NumEntidadReg": "15",
+  "NumRegExtranjeros": "",
+  "Sexo": "H",
+  "StatusCurp": "RCN",
+  "Tomo": ""
+}
+```
+
+En caso que el valor de la CURP sea incorrecto o que la cadena de texto sea erronea, el _API_ mostrará el siguiente mensaje:
+```
+{
+  "Error": "El formato de CURP o datos generales son incorrectos.",
+  "msg": "curp"
+}
+```
+
+## Documentacion API
+El _API_ al ser creada con _FAST API_ incluye una sección de documentacion la cuál puedes revisar ingresando a la direccion [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) cuando la _API_ esté en ejecución.
+
+## Contacto
+La _API_ fue desarrollada sin fines de lucro, puedes utilizarla, modificarla o compartirla, solo haz referencia a este proyecto 🤓. #HappyCoding
+
+- Desarrollador por __Jose Antonio Mora__
+- [WEB](https://jantoniomora.wordpress.com/)

@@ -8,7 +8,7 @@ CURP Validador ayuda a validar la Clave Unica de Resgistro a la Poblacion de Mé
 
 ## CURP
 
-Regresa la información en formato JSON para su uso
+Regresa la información en formato JSON para su uso, el valor que recibe es una cadena de caracters de longuitud 18.
 
 """
 
