@@ -6,7 +6,11 @@ La API esta basada en la pagina web de [RENAPO](http://www.renapo.sep.gob.mx/wsr
 
 ## Secciones
 - [¿Cómo utilizar localmente la API?](#cómo-utilizar-localmente-la-API)
-
+  - [Requisitos para ejecutar Localmente](#requisitos)
+- [Utilizar la API](#utilizar-api)
+- [Respuesta de API](#respuesta-de-api)
+- [Documentacion API](#documentacion-api)
+- [Contacto](#contacto)
 
 ## ¿Cómo utilizar localmente la API?
 Para utilizar el proyecto de forma local se hay que verificar los siguientes requisitos:
@@ -26,6 +30,11 @@ Por default la API estará ejecutandose en [http://127.0.0.1:8000](http://127.0.
 Por el momento la _API_ únicamente incluye el _endpoint_ "curp", el cual permite comprobar si una __CURP__ existe en el sistema. Los resultados serán proporcionados por la pagina, por lo cuál el API no almacenará ninguna información.
 
 Para utilizar el servicio hay que ingresar a la ruta [http://127.0.0.1:8000/curp/](http://127.0.0.1:8000/curp/) en donde se tiene que enviar el parámetro de la CURP [referencia del formato CURP](https://es.wikipedia.org/wiki/Clave_%C3%9Anica_de_Registro_de_Poblaci%C3%B3n).
+
+Endpoint: __http://127.0.0.1:8000/curp/{curp}__
+
+Ejemplo: http://127.0.0.1:8000/curp/ABCD123456XXXXXX78
+
 
 ## Respuesta de API
 La _API_ regresará como resultado un objeto JSON que incluye la información extraída de la pagina para su fácil consulta, a continuación un ejemplo de como se ve el resultado válido:
@@ -50,7 +59,7 @@ La _API_ regresará como resultado un objeto JSON que incluye la información ex
   "NumActa": "00055",
   "NumEntidadReg": "15",
   "NumRegExtranjeros": "",
-  "Sexo": "H",
+  "Sexo": "",
   "StatusCurp": "RCN",
   "Tomo": ""
 }
@@ -63,6 +72,8 @@ En caso que el valor de la CURP sea incorrecto o que la cadena de texto sea erro
   "msg": "curp"
 }
 ```
+
+El tiempo de respuesta de la API utilizando _Postman_ es de **~400ms** aprox. *Investigando como bajar tiempos en respuesta.
 
 ## Documentacion API
 El _API_ al ser creada con _FAST API_ incluye una sección de documentacion la cuál puedes revisar ingresando a la direccion [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) cuando la _API_ esté en ejecución.
