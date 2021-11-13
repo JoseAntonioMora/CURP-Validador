@@ -36,6 +36,10 @@ Endpoint: __http://127.0.0.1:8000/curp/{curp}__
 Ejemplo: http://127.0.0.1:8000/curp/ABCD123456XXXXXX78
 
 
+Host temporal de prueba: https://curp-validator.herokuapp.com/curp/
+
+=> Tiempo de respuesta en _Heroku_ **~500ms**
+
 ## Respuesta de API
 La _API_ regresará como resultado un objeto JSON que incluye la información extraída de la pagina para su fácil consulta, a continuación un ejemplo de como se ve el resultado válido:
 
